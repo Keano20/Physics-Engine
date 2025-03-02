@@ -10,7 +10,7 @@ void RigidBody::applyForce(const sf::Vector2f& force) {
 void RigidBody::update(float deltaTime) {
   velocity += acceleration * deltaTime;
   position += velocity * deltaTime;
-  acceleration = {0.f, 0.f}; // Reset accelaration each frame
+  acceleration = {0.f, 0.f}; // Reset acceleration each frame
 }
 
 sf::Vector2f RigidBody::getPosition() const {
