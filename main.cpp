@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src/core/Engine.cpp"
+#include "include/core/Engine.h"
 
 int main() {
     Engine engine;

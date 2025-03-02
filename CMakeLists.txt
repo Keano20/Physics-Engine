@@ -3,7 +3,14 @@ project(Physics_engine)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Physics_engine main.cpp)
+add_executable(Physics_engine
+        main.cpp
+        src/core/Engine.cpp
+        src/core/PhysicsWorld.cpp
+        src/physics/Gravity.cpp
+        src/physics/RigidBody.cpp
+        src/collision/Collision.cpp
+)
 
 # MacOS
 find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
