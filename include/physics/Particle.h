@@ -11,7 +11,7 @@ class Particle : public RigidBody {
       Particle(sf::Vector2f startPosition, float mass, float lifespan);
 
       void update(float deltaTime); //Allow overiding of the update method
-      void draw(sf::RenderWindow& window);
+      void draw(sf::RenderWindow& window); // Draw particle to the screem
       bool isActive() const; // Check if the particle is still active
 };
 

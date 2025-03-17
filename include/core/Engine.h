@@ -10,6 +10,7 @@ public:
 
 private:
     sf::RenderWindow window;
+
     void processEvents();
     void update();
     void render();
