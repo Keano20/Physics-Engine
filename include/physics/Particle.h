@@ -2,6 +2,7 @@
 #define PARTICLE_H
 
 #include"../../include/physics/RigidBody.h" // Include our RigidBody class for inheritence
+#include <memory>
 
 class Particle : public RigidBody {
   private:
@@ -10,7 +11,7 @@ class Particle : public RigidBody {
     public:
       Particle(sf::Vector2f startPosition, float mass, float lifespan);
 
-      void update(float deltaTime); //Allow overiding of the update method
+      void update(float deltaTime); //Allow overriding of the update method
       void draw(sf::RenderWindow& window); // Draw particle to the screem
       bool isActive() const; // Check if the particle is still active
 };
