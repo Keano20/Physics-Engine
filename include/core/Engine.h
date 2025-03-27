@@ -12,6 +12,7 @@ public:
 private:
     sf::RenderWindow window;
     std::vector<std::unique_ptr<Particle>> particles;
+    sf::Clock clock;
 
     void processEvents();
     void update();

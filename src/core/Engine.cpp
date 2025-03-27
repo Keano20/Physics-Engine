@@ -2,8 +2,8 @@
 #include "../../include/physics/Particle.h"
 
 Engine::Engine() :window(sf::VideoMode(720,500), "Physics playground") {
-    window.setFramerateLimit(10); // sets the frame rate
-    particles.push_back(std::make_unique<Particle>(sf::Vector2f(100.f, 100.f), 1.f, 10.f));
+    window.setFramerateLimit(60); // sets the frame rate
+    particles.push_back(std::make_unique<Particle>(sf::Vector2f(100.f, 100.f), 1.f, 15.f));
 }
 
 void Engine::run() {
@@ -23,7 +23,7 @@ void Engine::processEvents() {
 }
 
 void Engine::update(){
-    float deltaTime = 1.0f;
+    float deltaTime = clock.restart().asSeconds();
     for (auto& particle : particles) {
         if (particle-> isActive()) {
             particle->update(deltaTime);
