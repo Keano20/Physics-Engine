@@ -12,7 +12,7 @@ void Particle::update(float deltaTime) {
 }
 
 void Particle::draw(sf::RenderWindow& window) {
-  sf::CircleShape shape(5.f); // Create a small circle
+  sf::CircleShape shape(7.f); // Create a small circle
   shape.setPosition(getPosition()); // Get inherited position from RigidBody
   shape.setFillColor(sf::Color::White);
   window.draw(shape);
