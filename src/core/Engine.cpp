@@ -1,4 +1,5 @@
 #include "../../include/core/Engine.h"
+#include "../../include/physics/Particle.h"
 
 Engine::Engine() :window(sf::VideoMode(720,500), "Physics playground") {
     window.setFramerateLimit(10);
@@ -21,7 +22,6 @@ void Engine::processEvents() {
 }
 
 void Engine::update(){
-    // Physics logic goes here
 }
 
 void Engine::render() {

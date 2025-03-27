@@ -2,6 +2,7 @@
 #define PHYSICS_ENGINE_ENGINE_H
 
 #include <SFML/Graphics.hpp>
+#include "../../include/physics/Particle.h"
 
 class Engine {
 public:
@@ -10,6 +11,7 @@ public:
 
 private:
     sf::RenderWindow window;
+    std::vector<std::unique_ptr<Particle>> particles;
 
     void processEvents();
     void update();
