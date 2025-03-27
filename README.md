@@ -16,7 +16,33 @@ This is a Physics Engine built with C++ and SFML. It’s designed to simulate ba
    ```bash
    brew install sfml
    ```
+## Windows
+Install SFML from: https://www.sfml-dev.org/download.php
+Follow instructions to set up SFML in your IDE (CLion, Visual Studio, etc.)
 
-## 📌 Dependencies
+## Ubuntu / Linux
+```bash
+   sudo apt install libsfml-dev
+```
+
+## Building the project
+From the root of the project:
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./Physics_engine
+```
+
+
+## Future plans
+-Mouse interaction (click to spawn particles)
+
+-Particle collision detection
+
+-Gravity toggles
+
+-Configurable settings via UI or config file
 
 - [SFML 2.5+](https://www.sfml-dev.org/)
