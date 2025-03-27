@@ -5,12 +5,13 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Physics_engine
         main.cpp
+        tests/TestPhysicsWorld.cpp
         src/core/Engine.cpp
         src/core/PhysicsWorld.cpp
         src/physics/Gravity.cpp
         src/physics/RigidBody.cpp
-        src/collision/Collision.cpp
         src/physics/Particle.cpp
+        src/collision/Collision.cpp
 )
 
 # MacOS
