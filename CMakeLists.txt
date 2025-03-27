@@ -10,6 +10,7 @@ add_executable(Physics_engine
         src/physics/Gravity.cpp
         src/physics/RigidBody.cpp
         src/collision/Collision.cpp
+        src/physics/Particle.cpp
 )
 
 # MacOS
