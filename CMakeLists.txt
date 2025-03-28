@@ -22,7 +22,7 @@ if(APPLE)
 elseif(WIN32)
     # Windows specific settings
     # Update this path based on where SFML is installed on your Windows system
-    set(SFML_DIR "C:/SFML-3.0.0/lib/cmake/SFML")
+    set(SFML_DIR "C:/SFML-2.6.2/lib/cmake/SFML")
     include_directories("C:/SFML-2.6.2/include")
 endif()
 
