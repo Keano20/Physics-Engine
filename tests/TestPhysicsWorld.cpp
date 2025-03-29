@@ -1,3 +1,7 @@
+// TestPhysicsWorld.cpp
+// This file provides a basic test environment for isolated physics debugging.
+// Not part of the main runtime system.
+
 #include "TestPhysicsWorld.h"
 #include "../include/physics/Particle.h"
 #include <SFML/Graphics.hpp>
