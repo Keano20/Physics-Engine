@@ -10,7 +10,7 @@ void TestPhysicsWorld::runTestEnvironment() {
     sf::RenderWindow window(sf::VideoMode(sf::Vector2u(720, 500)), "TESTING ENVIRONMENT");
     sf::Clock clock;
 
-    std::unique_ptr<Particle> particle = std::make_unique<Particle>(sf::Vector2f(100.f, 100.f), 1.f, 5.f);
+    std::unique_ptr<Particle> particle = std::make_unique<Particle>(sf::Vector2f(100.f, 100.f), 1.f, 15.f);
 
     while (window.isOpen()) {
         while (const std::optional event = window.pollEvent()) {
