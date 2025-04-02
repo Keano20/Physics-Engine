@@ -17,20 +17,20 @@ add_executable(Physics_engine
 if(APPLE)
     # macOS specific settings
     # NOTE: The SFML path below may vary depending on how SFML was installed
-    set(SFML_DIR "/opt/homebrew/Cellar/sfml/2.6.2/lib/cmake/SFML")
-    include_directories("/opt/homebrew/Cellar/sfml/2.6.2/include/SFML")
+    set(SFML_DIR "/opt/homebrew/Cellar/sfml/lib/cmake/SFML")
+    include_directories("/opt/homebrew/Cellar/sfml/include/SFML")
 elseif(WIN32)
     # Windows specific settings
     # Update the file paths based on where SFML is installed on your Windows system
-    set(SFML_DIR "C:/SFML-2.6.2/lib/cmake/SFML")
-    include_directories("C:/SFML-2.6.2/include")
+    set(SFML_DIR "C:/SFML/lib/cmake/SFML")
+    include_directories("C:/SFML/include")
 endif()
 
-find_package(SFML 2.5 COMPONENTS system window graphics audio REQUIRED)
+find_package(SFML 3 REQUIRED COMPONENTS System Window Graphics Audio)
 
 target_link_libraries(Physics_engine
-        sfml-system
-        sfml-window
-        sfml-graphics
-        sfml-audio
+        SFML::System
+        SFML::Window
+        SFML::Graphics
+        SFML::Audio
 )
