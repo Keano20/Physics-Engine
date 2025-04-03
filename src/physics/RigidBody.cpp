@@ -20,10 +20,3 @@ sf::Vector2f RigidBody::getPosition() const {
 void RigidBody::setPosition(const sf::Vector2f& newPosition){
   position = newPosition;
 }
-
-void RigidBody::draw(sf::RenderWindow& window){
-  sf::CircleShape shape(10.f);
-  shape.setPosition(position);
-  shape.setFillColor(sf::Color::Blue);
-  window.draw(shape);
-}
