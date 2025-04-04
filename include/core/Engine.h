@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../../include/physics/Particle.h"
+#include "../physics/Gravity.h"
 
 class Engine {
 public:
@@ -13,6 +14,7 @@ private:
     sf::RenderWindow window;
     std::vector<std::unique_ptr<Particle>> particles;
     sf::Clock clock;
+    Gravity gravity;
 
     void processEvents();
     void update();
