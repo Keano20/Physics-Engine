@@ -19,6 +19,9 @@ public:
     sf::Vector2f getPosition() const;
     void setPosition(const sf::Vector2f& newPosition);
 
+    sf::Vector2f getVelocity() const;
+    void setVelocity(const sf::Vector2f& newVelocity);
+
     void draw(sf::RenderWindow& window);
 };
 

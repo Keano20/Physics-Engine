@@ -20,3 +20,11 @@ sf::Vector2f RigidBody::getPosition() const {
 void RigidBody::setPosition(const sf::Vector2f& newPosition){
   position = newPosition;
 }
+
+sf::Vector2f RigidBody::getVelocity() const {
+  return velocity;
+}
+
+void RigidBody::setVelocity(const sf::Vector2f& newVelocity) {
+  velocity = newVelocity;
+}
