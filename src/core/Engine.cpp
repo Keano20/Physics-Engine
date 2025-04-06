@@ -1,5 +1,6 @@
 #include "../../include/core/Engine.h"
 #include "../../include/physics/Particle.h"
+#include "../../include/collision/Collision.h"
 
 Engine::Engine() :window(sf::VideoMode(sf::Vector2u(720, 500)), "Physics Playground") {
     window.setFramerateLimit(60); // sets the frame rate
@@ -29,13 +30,11 @@ void Engine::processEvents() {
 void Engine::update() {
     float deltaTime = clock.restart().asSeconds();
     for (auto& particle : particles) {
-        if (particle-> isActive()) {
+        if (particle->isActive()) {
+            particle->applyForce(gravity.getForce());
             particle->update(deltaTime);
+            Collision::resolveBorderCollision(*particle, window);
         }
-    }
-    for (auto& particle : particles) {
-        particle->applyForce(gravity.getForce());
-        particle->update(deltaTime);
     }
 }
 
