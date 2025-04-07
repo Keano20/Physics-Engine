@@ -2,6 +2,7 @@
 #define PHYSICS_ENGINE_ENGINE_H
 
 #include <SFML/Graphics.hpp>
+#include "PhysicsWorld.h"
 #include "../../include/physics/Particle.h"
 #include "../physics/Gravity.h"
 
@@ -15,6 +16,7 @@ private:
     std::vector<std::unique_ptr<Particle>> particles;
     sf::Clock clock;
     Gravity gravity;
+    PhysicsWorld physicsWorld;
 
     void processEvents();
     void update();

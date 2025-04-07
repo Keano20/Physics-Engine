@@ -9,6 +9,7 @@ Engine::Engine() :window(sf::VideoMode(sf::Vector2u(720, 500)), "Physics Playgro
         sf::Vector2f particlePosition(360.f + i * 10.f, 250.f);
         particles.push_back(std::make_unique<Particle>(particlePosition, 1.5, 15));
     }
+    physicsWorld.setParticlesReference(particles);
 }
 
 void Engine::run() {
@@ -29,13 +30,7 @@ void Engine::processEvents() {
 
 void Engine::update() {
     float deltaTime = clock.restart().asSeconds();
-    for (auto& particle : particles) {
-        if (particle->isActive()) {
-            particle->applyForce(gravity.getForce());
-            particle->update(deltaTime);
-            Collision::resolveBorderCollision(*particle, window);
-        }
-    }
+    physicsWorld.update(deltaTime, window);
 }
 
 void Engine::render() {
