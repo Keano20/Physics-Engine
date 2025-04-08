@@ -19,6 +19,9 @@ public:
     // Sets a reference to the particle list managed externally
     void setParticlesReference(std::vector<std::unique_ptr<Particle>>& particlesRef);
 
+    // Spawns in particles at a random location within the window
+    void spawnParticles(int particleCount);
+
     // Updates particle states and resolves collisions
     void update(float deltaTime, sf::RenderWindow& window);
 

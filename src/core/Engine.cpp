@@ -1,15 +1,10 @@
 #include "../../include/core/Engine.h"
 #include "../../include/physics/Particle.h"
-#include "../../include/collision/Collision.h"
 
 Engine::Engine() :window(sf::VideoMode(sf::Vector2u(720, 500)), "Physics Playground") {
     window.setFramerateLimit(60); // sets the frame rate
-    //particles.push_back(std::make_unique<Particle>(sf::Vector2f(100.f, 100.f), 1.f, 15.f)); //Spawns a single particle
-    for (int i = 0; i < 10; i++) {
-        sf::Vector2f particlePosition(360.f + i * 10.f, 250.f);
-        particles.push_back(std::make_unique<Particle>(particlePosition, 1.5, 15));
-    }
     physicsWorld.setParticlesReference(particles);
+    physicsWorld.spawnParticles(100);
 }
 
 void Engine::run() {
