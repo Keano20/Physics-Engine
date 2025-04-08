@@ -44,5 +44,3 @@ make
 -Gravity toggles
 
 -Configurable settings via UI or config file
-
-- [SFML 2.5+](https://www.sfml-dev.org/)
