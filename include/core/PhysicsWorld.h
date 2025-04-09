@@ -22,6 +22,9 @@ public:
     // Spawns in particles at a random location within the window
     void spawnParticles(int particleCount);
 
+    // Checks if any particles are colliding
+    void checkParticleCollisions();
+
     // Updates particle states and resolves collisions
     void update(float deltaTime, sf::RenderWindow& window);
 

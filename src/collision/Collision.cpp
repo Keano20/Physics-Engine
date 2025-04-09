@@ -29,6 +29,22 @@ void Collision::resolveBorderCollision(Particle& particle, const sf::RenderWindo
     particle.setVelocity(velocity);
 }
 
-void Collision::resolveParticleCollision(Particle& particleA, Particle& particleB) {
+void Collision::resolveParticleCollision(Particle& firstParticle, Particle& secondParticle) {
+    sf::Vector2f firstPosition = firstParticle.getPosition();
+    sf::Vector2f secondPosition = secondParticle.getPosition();
 
+    float particleRadius = 7.f;
+
+    sf::Vector2f difference = secondPosition - firstPosition;
+    float distance = std::sqrt(difference.x * difference.x + difference.y * difference.y);
+
+    // Check for overlap
+    if (distance < 2 * particleRadius && distance > 0) {
+        // Simple response: just swap their velocities
+        sf::Vector2f firstVelocity = firstParticle.getVelocity();
+        sf::Vector2f secondVelocity = secondParticle.getVelocity();
+
+        firstParticle.setVelocity(secondVelocity);
+        secondParticle.setVelocity(firstVelocity);
+    }
 }
