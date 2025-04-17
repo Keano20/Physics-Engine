@@ -44,3 +44,5 @@ make
 -Gravity toggles
 
 -Configurable settings via UI or config file
+
+-Start menu
