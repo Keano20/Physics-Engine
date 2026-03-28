@@ -1,8 +1,8 @@
-#  💥 Physics Engine
+#  Physics Engine
 
 This is a Physics Engine built with C++ and SFML. It’s designed to simulate basic physics like gravity, movement, and collisions.
 
-##  💡 Features
+##  Features
 
 - Simulates rigid body movement.
 - Detects collisions
